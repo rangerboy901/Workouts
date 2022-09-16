@@ -14,6 +14,14 @@
 		4AA9498A28D3F7EB00AC838B /* WorkoutsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA9498928D3F7EB00AC838B /* WorkoutsTests.swift */; };
 		4AA9499428D3F7EB00AC838B /* WorkoutsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA9499328D3F7EB00AC838B /* WorkoutsUITests.swift */; };
 		4AA9499628D3F7EB00AC838B /* WorkoutsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA9499528D3F7EB00AC838B /* WorkoutsUITestsLaunchTests.swift */; };
+		4AA949A428D3F82700AC838B /* Realm in Frameworks */ = {isa = PBXBuildFile; productRef = 4AA949A328D3F82700AC838B /* Realm */; };
+		4AA949A628D3F82700AC838B /* RealmSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 4AA949A528D3F82700AC838B /* RealmSwift */; };
+		4AA949AC28D3FCFE00AC838B /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA949AB28D3FCFE00AC838B /* Workout.swift */; };
+		4AA949AE28D41D0500AC838B /* WorkoutCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA949AD28D41D0500AC838B /* WorkoutCell.swift */; };
+		4AA949B028D424DE00AC838B /* WorkoutListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA949AF28D424DE00AC838B /* WorkoutListScreen.swift */; };
+		4AA949B228D42ECB00AC838B /* UIApplication+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA949B128D42ECB00AC838B /* UIApplication+Extension.swift */; };
+		4AA949B428D4366700AC838B /* AddWorkoutScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA949B328D4366700AC838B /* AddWorkoutScreen.swift */; };
+		4AA949B828D437E500AC838B /* HapticManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA949B728D437E500AC838B /* HapticManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +52,12 @@
 		4AA9498F28D3F7EB00AC838B /* WorkoutsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WorkoutsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4AA9499328D3F7EB00AC838B /* WorkoutsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutsUITests.swift; sourceTree = "<group>"; };
 		4AA9499528D3F7EB00AC838B /* WorkoutsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutsUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		4AA949AB28D3FCFE00AC838B /* Workout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
+		4AA949AD28D41D0500AC838B /* WorkoutCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutCell.swift; sourceTree = "<group>"; };
+		4AA949AF28D424DE00AC838B /* WorkoutListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutListScreen.swift; sourceTree = "<group>"; };
+		4AA949B128D42ECB00AC838B /* UIApplication+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extension.swift"; sourceTree = "<group>"; };
+		4AA949B328D4366700AC838B /* AddWorkoutScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddWorkoutScreen.swift; sourceTree = "<group>"; };
+		4AA949B728D437E500AC838B /* HapticManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +65,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4AA949A628D3F82700AC838B /* RealmSwift in Frameworks */,
+				4AA949A428D3F82700AC838B /* Realm in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,8 +110,12 @@
 		4AA9497728D3F7EB00AC838B /* Workouts */ = {
 			isa = PBXGroup;
 			children = (
+				4AA949B628D437CD00AC838B /* Managers */,
+				4AA949AA28D3F86000AC838B /* Views */,
+				4AA949A928D3F85600AC838B /* Models */,
+				4AA949A828D3F83D00AC838B /* Extensions */,
+				4AA949A728D3F83500AC838B /* Helper */,
 				4AA9497828D3F7EB00AC838B /* WorkoutsApp.swift */,
-				4AA9497A28D3F7EB00AC838B /* ContentView.swift */,
 				4AA9497C28D3F7EB00AC838B /* Assets.xcassets */,
 				4AA9497E28D3F7EB00AC838B /* Preview Content */,
 			);
@@ -127,6 +147,56 @@
 			path = WorkoutsUITests;
 			sourceTree = "<group>";
 		};
+		4AA949A728D3F83500AC838B /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		4AA949A828D3F83D00AC838B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4AA949B128D42ECB00AC838B /* UIApplication+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		4AA949A928D3F85600AC838B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4AA949AB28D3FCFE00AC838B /* Workout.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		4AA949AA28D3F86000AC838B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4AA9497A28D3F7EB00AC838B /* ContentView.swift */,
+				4AA949AD28D41D0500AC838B /* WorkoutCell.swift */,
+				4AA949B528D4366F00AC838B /* Screens */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		4AA949B528D4366F00AC838B /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				4AA949B328D4366700AC838B /* AddWorkoutScreen.swift */,
+				4AA949AF28D424DE00AC838B /* WorkoutListScreen.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		4AA949B628D437CD00AC838B /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				4AA949B728D437E500AC838B /* HapticManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +213,10 @@
 			dependencies = (
 			);
 			name = Workouts;
+			packageProductDependencies = (
+				4AA949A328D3F82700AC838B /* Realm */,
+				4AA949A528D3F82700AC838B /* RealmSwift */,
+			);
 			productName = Workouts;
 			productReference = 4AA9497528D3F7EB00AC838B /* Workouts.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +289,9 @@
 				Base,
 			);
 			mainGroup = 4AA9496C28D3F7EB00AC838B;
+			packageReferences = (
+				4AA949A228D3F82700AC838B /* XCRemoteSwiftPackageReference "realm-cocoa" */,
+			);
 			productRefGroup = 4AA9497628D3F7EB00AC838B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -259,6 +336,12 @@
 			files = (
 				4AA9497B28D3F7EB00AC838B /* ContentView.swift in Sources */,
 				4AA9497928D3F7EB00AC838B /* WorkoutsApp.swift in Sources */,
+				4AA949B828D437E500AC838B /* HapticManager.swift in Sources */,
+				4AA949B028D424DE00AC838B /* WorkoutListScreen.swift in Sources */,
+				4AA949AC28D3FCFE00AC838B /* Workout.swift in Sources */,
+				4AA949B228D42ECB00AC838B /* UIApplication+Extension.swift in Sources */,
+				4AA949B428D4366700AC838B /* AddWorkoutScreen.swift in Sources */,
+				4AA949AE28D41D0500AC838B /* WorkoutCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -583,6 +666,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4AA949A228D3F82700AC838B /* XCRemoteSwiftPackageReference "realm-cocoa" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-cocoa";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4AA949A328D3F82700AC838B /* Realm */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4AA949A228D3F82700AC838B /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = Realm;
+		};
+		4AA949A528D3F82700AC838B /* RealmSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4AA949A228D3F82700AC838B /* XCRemoteSwiftPackageReference "realm-cocoa" */;
+			productName = RealmSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 4AA9496D28D3F7EB00AC838B /* Project object */;
 }
